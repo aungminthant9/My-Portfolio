@@ -4,6 +4,7 @@ import nextjs from '../assets/nextjs.jpg'
 import numpy from '../assets/numpy_pandas.jpg'
 import sql from '../assets/sql.png'
 import tailwind from '../assets/tailwind.jpg'
+import simbolo from '../assets/simbolo_certificate.png'
 
 const Certificates = () => {
   const { currentColor } = useColor()
@@ -13,6 +14,11 @@ const Certificates = () => {
       title: "NumPy & Pandas Mastery", 
       image: numpy,
       link: "https://www.udemy.com/certificate/UC-1703a399-6316-415f-bc7d-04ade1fef924/"
+    },
+    { 
+      title: "Simbolo Achievement", 
+      image: simbolo,
+      link: "#"
     },
     { 
       title: "Next.js Development", 

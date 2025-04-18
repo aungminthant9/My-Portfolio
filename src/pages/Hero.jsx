@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedinIn, FaFacebookF } from 'react-icons/fa'
 import { TypeAnimation } from 'react-type-animation'
 import { Link } from 'react-scroll'
 import photome from '../assets/me2.png'
+import resumePDF from '../assets/aungminthant_resume.pdf' // Add this import
 
 const Hero = () => {
   const { currentColor } = useColor()
@@ -14,6 +15,10 @@ const Hero = () => {
     { icon: FaLinkedinIn, url: "https://linkedin.com/in/yourusername" },
     { icon: FaFacebookF, url: "https://facebook.com/yourusername" }
   ]
+
+  const handleDownload = () => {
+    window.open(resumePDF, '_blank')
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 relative overflow-hidden">
@@ -93,6 +98,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg border-2 text-sm sm:text-base"
               style={{ borderColor: currentColor }}
+              onClick={handleDownload}
             >
               Download Resume
             </motion.button>
