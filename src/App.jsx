@@ -18,10 +18,10 @@ const AppContent = () => {
 
   return (
     <motion.div
-      className={`bg-gradient-to-br ${gradient} text-white min-h-screen transition-colors duration-700`}
-      initial={{ opacity: 0 }}
+      className={`bg-gradient-to-br ${gradient} text-white min-h-screen transition-colors duration-500`}
+      initial={false}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
     >
       <Navbar />
       <Element name="home">

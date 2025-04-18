@@ -27,15 +27,15 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Background Animation - Optimize performance */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <motion.div
           className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-r from-current to-transparent rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.2, 0.3],
           }}
-          transition={{ duration: 8, repeat: Infinity }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
           style={{ color: currentColor }}
         />
         <motion.div
@@ -49,11 +49,12 @@ const Hero = () => {
         />
       </div>
 
+      {/* Content */}
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 sm:gap-12 items-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="space-y-4 sm:space-y-6 text-center md:text-left md:pl-8 lg:pl-12 xl:pl-16"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-4">

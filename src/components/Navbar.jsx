@@ -8,15 +8,29 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navItems = ['Home', 'About', 'Skills', 'Projects', 'Certificates', 'Contact']
   const { currentColor } = useColor()
+  
+  // Optimize menu animation variants
   const menuVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 }
+    hidden: { opacity: 0, height: 0 },
+    visible: { 
+      opacity: 1, 
+      height: 'auto',
+      transition: {
+        duration: 0.3
+      }
+    },
+    exit: { 
+      opacity: 0, 
+      height: 0,
+      transition: {
+        duration: 0.2
+      }
+    }
   }
 
   return (
     <motion.nav 
-      initial={{ y: -100 }}
+      initial={false}
       animate={{ y: 0 }}
       className="fixed w-full bg-slate-900/80 backdrop-blur-sm z-50 py-4 px-6"
     >
