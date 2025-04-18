@@ -17,7 +17,12 @@ const Hero = () => {
   ]
 
   const handleDownload = () => {
-    window.open(resumePDF, '_blank')
+    const link = document.createElement('a')
+    link.href = resumePDF
+    link.download = 'aungminthant_resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
