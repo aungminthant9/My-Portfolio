@@ -12,7 +12,7 @@ const Hero = () => {
 
   const socialLinks = [
     { icon: FaGithub, url: "https://github.com/aungminthant9" },
-    { icon: FaLinkedinIn, url: "https://linkedin.com/in/yourusername" },
+    { icon: FaLinkedinIn, url: "https://www.linkedin.com/in/aung-min-thant-thant-24715b376/" },
     { icon: FaFacebookF, url: "https://facebook.com/yourusername" }
   ]
 
