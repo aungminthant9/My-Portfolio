@@ -72,7 +72,15 @@ const Projects = () => {
             >
               My Recent Projects
             </h2>
-            <p className="text-gray-300 text-lg">Showcasing my recent work</p>
+            <p className="text-gray-300 text-lg">Showcasing my recent work.</p>
+              <a 
+              href="https://github.com/aungminthant9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline ml-2"
+            >
+            more projects?
+          </a>
           </motion.div>
 
           <motion.div 
